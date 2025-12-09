@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Gastos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="container">
+        <h2>Controle de Gastos</h2>
+
+        <label>Tipo de Gasto</label>
+        <select id="tipoGasto">
+            <option value="alimentacao">Alimentação</option>
+            <option value="transporte">Transporte</option>
+            <option value="lazer">Lazer</option>
+            <option value="outros">Outros</option>
+        </select>
+
+        <label>Valor do Gasto</label>
+        <input type="number" id="valorGasto" placeholder="Digite o valor">
+
+        <button onclick="adicionarGasto()">Adicionar Gasto</button>
+
+        <div class="resumo">
+            <h3>Resumo</h3>
+
+            <div class="linha">
+                <span>Alimentação:</span>
+                <span id="alimentacao">R$ 0.00</span>
+            </div>
+
+            <div class="linha">
+                <span>Transporte:</span>
+                <span id="transporte">R$ 0.00</span>
+            </div>
+
+            <div class="linha">
+                <span>Lazer:</span>
+                <span id="lazer">R$ 0.00</span>
+            </div>
+
+            <div class="linha">
+                <span>Outros:</span>
+                <span id="outros">R$ 0.00</span>
+            </div>
+
+            <div class="linha" style="font-weight:bold; font-size:18px;">
+                <span>Total Geral:</span>
+                <span id="total">R$ 0.00</span>
+            </div>
+        </div>
+
+        <button onclick="limparCampos()">Limpar </button>
+    </div>
+
+    <!-- script carregado após o HTML -->
+    <script src="p1.js"></script>
+</body>
+</html>
